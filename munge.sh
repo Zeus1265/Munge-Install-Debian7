@@ -33,6 +33,6 @@ chmod 0700 /srv/chroots/debian7/var/log/munge
 chmod 0755 /srv/chroots/debian7/var/run/munge
 
 wwvnfs --chroot /srv/chroots/debian7 --hybridpath=/vnfs
-wwsh file import /etc/passwd
 wwsh file sync
+echo "It is probably a good idea to reboot your compute nodes now.\nMunge will not work properly until your compute nodes are rebooted"
 exit
